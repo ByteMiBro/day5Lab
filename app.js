@@ -55,7 +55,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operatod when you think it is f
 
 // Write your code here
 function sumAndMultiply(a,b,c){
+  var array = [a,b,c];
+  var calculatedSum = 0;
+  var calculatedProduct = 1;
+  for(var i = 0; i < array.length; i++) {
+    var valueFromArray = array[i];
 
+    calculatedSum = sum(valueFromArray, calculatedSum)[0];
+  }
+  for (var i = 0; i < array.length; i++) {
+    var valueFromArray = array[i];
+
+    calculatedProduct = multiply(valueFromArray, calculatedProduct)[0];
   }
   return [
     calculatedSum,
